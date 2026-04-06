@@ -6,14 +6,14 @@ trigger:
 - main
 
 # TODO: Replace the agent pool name
-pool: myAgentPool
+pool: myGreatAgentPool
 
 variables:
   # TODO: Replace the service connection name as used in the DevOps project settings
-  azureServiceConnectionId: 'mySC'
+  azureServiceConnectionId: 'myGreatServiceConnection'
   
   # TODO: Specify the value of the existing Web App name
-  webAppName: 'mywebapp207578'
+  webAppName: 'my-great-app8889'
 
   # Environment name
   environmentName: 'flask-ml-service'
@@ -29,9 +29,9 @@ stages:
     pool: myAgentPool
     steps:    
     - script: |
-        python3.7 -m pip install --upgrade pip
-        python3.7 -m pip install setup
-        python3.7 -m pip install -r requirements.txt
+        python3 -m pip install --upgrade pip
+        python3 -m pip install setup
+        python3 -m pip install -r requirements.txt
       workingDirectory: $(projectRoot)
       displayName: 'myStep 1'
 
